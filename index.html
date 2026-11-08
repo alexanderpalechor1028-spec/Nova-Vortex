@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Vortex | Tienda de tecnología</title>
+  <meta name="description" content="Celulares, computadores, accesorios y más tecnología en Nova Vortex.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="#inicio" class="logo">Nova<span>Vortex</span></a>
+    <nav class="menu" aria-label="Navegación principal">
+      <a href="#productos">Categorías</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ventajas">Por qué elegirnos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="carrito-btn" id="abrirCarrito" aria-label="Abrir pedido">🛒 <span id="contador">0</span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__texto">
+        <h1>Lleva tu experiencia tecnológica al siguiente nivel</h1>
+        <p>En Nova Vortex encontrarás celulares, computadores, accesorios y todo lo que necesitas para estar conectado.</p>
+        <div class="hero__botones">
+          <a href="#catalogo" class="boton boton--blanco">¡Compra ahora!</a>
+          <a href="#contacto" class="boton boton--borde">Escríbenos</a>
+        </div>
+      </div>
+      <div class="hero__vortex" aria-hidden="true">
+        <span class="anillo anillo--1"></span>
+        <span class="anillo anillo--2"></span>
+        <span class="anillo anillo--3"></span>
+        <span class="nucleo">NV</span>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="seccion" id="productos">
+      <h2>Encuentra tu próximo favorito</h2>
+      <p class="seccion__intro">Descubre nuestras categorías y elige lo que mejor se ajusta a ti.</p>
+      <div class="categorias">
+        <article class="categoria">
+          <span class="categoria__icono">📱</span>
+          <h3>Celulares</h3>
+          <p>Las últimas gamas para trabajar, jugar y capturar cada momento.</p>
+        </article>
+        <article class="categoria">
+          <span class="categoria__icono">💻</span>
+          <h3>Computadores</h3>
+          <p>Portátiles y de escritorio para estudio, oficina y diseño.</p>
+        </article>
+        <article class="categoria">
+          <span class="categoria__icono">🎧</span>
+          <h3>Accesorios</h3>
+          <p>Audífonos, cargadores, fundas, teclados y mucho más.</p>
+        </article>
+        <article class="categoria">
+          <span class="categoria__icono">⌚</span>
+          <h3>Y más tecnología</h3>
+          <p>Relojes inteligentes, gaming, almacenamiento y novedades.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="seccion catalogo" id="catalogo">
+      <h2>Catálogo de productos</h2>
+      <p class="seccion__intro">Filtra por categoría y agrega al pedido lo que más te guste.</p>
+      <div class="filtros" role="group" aria-label="Filtrar productos">
+        <button class="filtro activo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="celulares">Celulares</button>
+        <button class="filtro" data-filtro="computadores">Computadores</button>
+        <button class="filtro" data-filtro="accesorios">Accesorios</button>
+        <button class="filtro" data-filtro="otros">Otros</button>
+      </div>
+      <div class="productos">
+        <article class="producto" data-categoria="celulares">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/smartphone_nova_x1" alt="Smartphone Nova X1" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Smartphone Nova X1</h3>
+            <p>6.5" · 128 GB · Cámara triple de 50 MP</p>
+            <div class="producto__pie">
+              <span class="precio">$899.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Smartphone Nova X1" data-precio="899000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="celulares">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/smartphone_nova_pro" alt="Smartphone Nova Pro" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Smartphone Nova Pro</h3>
+            <p>6.7" · 256 GB · Carga rápida 67 W</p>
+            <div class="producto__pie">
+              <span class="precio">$1.499.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Smartphone Nova Pro" data-precio="1499000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="computadores">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/portatil_vortex_15" alt="Portátil Vortex 15" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Portátil Vortex 15</h3>
+            <p>Core i5 · 16 GB RAM · SSD 512 GB</p>
+            <div class="producto__pie">
+              <span class="precio">$2.399.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Portátil Vortex 15" data-precio="2399000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="computadores">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/pc_escritorio_gamer" alt="PC de escritorio Gamer" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>PC de escritorio Gamer</h3>
+            <p>Ryzen 5 · 16 GB RAM · Video dedicado</p>
+            <div class="producto__pie">
+              <span class="precio">$3.199.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="PC de escritorio Gamer" data-precio="3199000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="accesorios">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/audifonos_inalambricos" alt="Audífonos inalámbricos" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Audífonos inalámbricos</h3>
+            <p>Bluetooth 5.3 · Cancelación de ruido</p>
+            <div class="producto__pie">
+              <span class="precio">$149.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Audífonos inalámbricos" data-precio="149000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="accesorios">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/cargador_rapido_65w" alt="Cargador rápido 65 W" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Cargador rápido 65 W</h3>
+            <p>USB-C · Compatible con celular y portátil</p>
+            <div class="producto__pie">
+              <span class="precio">$79.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Cargador rápido 65 W" data-precio="79000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="accesorios">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/teclado_mecanico_rgb" alt="Teclado mecánico RGB" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Teclado mecánico RGB</h3>
+            <p>Switches rojos · Iluminación personalizable</p>
+            <div class="producto__pie">
+              <span class="precio">$189.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Teclado mecánico RGB" data-precio="189000">Agregar</button>
+            </div>
+          </div>
+        </article>
+        <article class="producto" data-categoria="otros">
+          <div class="producto__imagen">
+            <img data-img="Imagenes%20Css/reloj_inteligente" alt="Reloj inteligente" loading="lazy">
+          </div>
+          <div class="producto__info">
+            <h3>Reloj inteligente</h3>
+            <p>Pantalla AMOLED · Monitor de salud</p>
+            <div class="producto__pie">
+              <span class="precio">$239.000</span>
+              <button class="boton boton--azul boton--chico agregar" data-nombre="Reloj inteligente" data-precio="239000">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section class="ventajas" id="ventajas">
+      <div class="ventajas__contenido">
+        <h2>Tecnología con respaldo</h2>
+        <ul class="ventajas__lista">
+          <li><strong>Productos originales.</strong> Marcas confiables y artículos verificados.</li>
+          <li><strong>Atención personalizada.</strong> Te asesoramos antes y después de comprar.</li>
+          <li><strong>Precios justos.</strong> La mejor relación entre calidad y valor.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion contacto" id="contacto">
+      <div class="tarjeta">
+        <span class="tarjeta__sello">Atención directa</span>
+        <h2>Jaime Alexander Palechor Castillo</h2>
+        <p class="tarjeta__cargo">Propietario de Nova Vortex</p>
+        <p class="tarjeta__titulos">Futuro Ingeniero en Informática, Tecnólogo en Desarrollo de Software y Técnico en Sistemas</p>
+        <ul class="tarjeta__datos">
+          <li><span>💬</span> WhatsApp Business: respuesta rápida para cotizar y comprar</li>
+          <li><span>✉️</span> <a href="mailto:alexanderpalechor1028@gmail.com">alexanderpalechor1028@gmail.com</a></li>
+        </ul>
+        <div class="tarjeta__botones">
+          <a id="wsContacto" class="boton boton--whatsapp" href="#" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp Business</a>
+          <a class="boton boton--contorno" href="mailto:alexanderpalechor1028@gmail.com">Enviar correo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Nova Vortex. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- PANEL DEL PEDIDO -->
+  <aside class="carrito" id="carrito" hidden>
+    <h3>Tu pedido</h3>
+    <ul id="listaCarrito"></ul>
+    <p class="carrito__total">Total: <strong id="total">$0</strong></p>
+    <a id="enviarPedido" class="boton boton--azul" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    <button class="carrito__cerrar" id="cerrarCarrito">Cerrar</button>
+  </aside>
+
+  <script src="botones.js"></script>
+</body>
+</html>
